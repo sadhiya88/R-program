@@ -1,0 +1,42 @@
+```{r}
+library(MASS)
+```
+```{r}
+df=medical_insurance
+```
+```{r}
+View(df)
+```
+```{r}
+head(df)
+```
+```{r}
+tail(df)
+```
+```{r}
+str(df)
+```
+```{r}
+summary(df)
+```
+```{r}
+ggplot(df, aes(x = age)) +
+  geom_histogram(binwidth = 5, fill = "blue", color = "black") +
+  labs(title = "Distribution of Age", x = "Age", y = "Frequency")
+```
+```{r}
+ggplot(df, aes(x = age, y = charges)) +
+  geom_point(color = "blue") +
+  labs(title = "Age vs. Charges", x = "Age", y = "Charges")
+```
+```{r}
+ggplot(df, aes(x = region, y = charges)) +
+  geom_boxplot(fill = "blue") +
+  labs(title = "Charges by Region", x = "Region", y = "Charges")
+```
+```{r}
+ggplot(df, aes(x = region)) +
+  geom_bar(fill = "blue") +
+  labs(title = "Count of Regions", x = "Region", y = "Count")
+```
+
